@@ -636,6 +636,30 @@
     "is_invalid": true
   },
   {
+    "description": "invalid CPAN with just the module name and version",
+    "purl": "pkg:cpan/LWP::UserAgent",
+    "canonical_purl": "pkg:cpan/LWP::UserAgent@6.7.6",
+    "type": "cpan",
+    "namespace": null,
+    "name": "LWP::UserAgent",
+    "version": "6.7.6",
+    "qualifiers": null,
+    "subpath": null,
+    "is_invalid": true
+  },
+  {
+    "description": "invalid CPAN with just the module name",
+    "purl": "pkg:cpan/DBD::SQLite",
+    "canonical_purl": "pkg:cpan/DBD::SQLite",
+    "type": "cpan",
+    "namespace": null,
+    "name": "DBD::SQLite",
+    "version": null,
+    "qualifiers": null,
+    "subpath": null,
+    "is_invalid": true
+  },
+  {
     "description": "ensure namespace allows multiple segments",
     "purl": "pkg:bintray/apache/couchdb/couchdb-mac@2.3.0",
     "canonical_purl": "pkg:bintray/apache/couchdb/couchdb-mac@2.3.0",
