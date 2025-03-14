@@ -588,7 +588,7 @@
     "is_invalid": false
   },
   {
-    "description": "CPAN distribution name are case sensitive",
+    "description": "CPAN distributions name are case sensitive",
     "purl": "pkg:cpan/GDT/URI-PackageURL",
     "canonical_purl": "pkg:cpan/GDT/URI-PackageURL",
     "type": "cpan",
@@ -600,7 +600,7 @@
     "is_invalid": false
   },
   {
-    "description": "CPAN distribution without author",
+    "description": "invalid CPAN distribution without author",
     "purl": "pkg:cpan/Perl-Version@1.013",
     "canonical_purl": "pkg:cpan/Perl-Version@1.013",
     "type": "cpan",
@@ -612,7 +612,7 @@
     "is_invalid": true
   },
   {
-    "description": "CPAN distribution in BackPan repository",
+    "description": "CPAN distribution in BackPAN repository",
     "purl": "pkg:cpan/DROLSKY/DateTime@1.55?repository_url=backpan.perl.org",
     "canonical_purl": "pkg:cpan/DROLSKY/DateTime@1.55?repository_url=backpan.perl.org",
     "type": "cpan",
@@ -622,6 +622,18 @@
     "qualifiers": {"repository_url":"backpan.perl.org"},
     "subpath": null,
     "is_invalid": false
+  },
+  {
+    "description": "invalid CPAN distribution name as module name",
+    "purl": "pkg:cpan/GDT/URI::PackageURL",
+    "canonical_purl": "pkg:cpan/GDT/URI::PackageURL",
+    "type": "cpan",
+    "namespace": "GDT",
+    "name": "URI::PackageURL",
+    "version": null,
+    "qualifiers": null,
+    "subpath": null,
+    "is_invalid": true
   },
   {
     "description": "ensure namespace allows multiple segments",
