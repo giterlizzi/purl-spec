@@ -174,7 +174,7 @@ cpan
 
 - The default repository is ``https://www.cpan.org/``.
 - The ``namespace`` is the CPAN id of the author/publisher. It MUST be written uppercase and is required.
-- The ``name`` is the distribution name and is case sensitive.
+- The ``name`` is the distribution name and is case sensitive. A distribution name MUST NOT contain the string ``::``.
 - The ``version`` is the distribution version.
 - Optional qualifiers may include:
 
