@@ -25,6 +25,7 @@ The structure of a PURL for this package type is:
 
 ## Name definition
 
+- **Case Sensitive:** Yes
 - **Native Label:** name
 - **Note:** `The name is the package name and is case sensitive, but there cannot be two packages on CRAN with the same name ignoring case.`
 
