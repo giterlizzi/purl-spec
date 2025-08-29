@@ -1,0 +1,51 @@
+name: Publish PURL JSON schemas and types
+
+on:
+  push:
+    paths:
+      - "types/*.json"
+      - "schemas/*.json"
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout site source
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Copy PURL JSON schemas and types
+        run: |
+          mkdir -p _site/{types,schemas}
+          cp -va types/*.json _site/types
+          cp -va schemas/*.json _site/schemas
+          for f in schemas/*.json; do
+            cp -va "$f" "_site/${f%.json}-1.0.json"
+          done
+          find _site -ls
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
