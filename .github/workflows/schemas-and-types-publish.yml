@@ -7,6 +7,7 @@ on:
       - "schemas/*.json"
     branches:
       - main
+      - gh-action-schemas-types-publish
   workflow_dispatch:
 
 permissions:

@@ -8,6 +8,7 @@ on:
       - "etc/"
     branches:
       - main
+      - gh-action-schemas-types-publish
   workflow_dispatch:
 # All permissions should be specified at the job level
 permissions: { }
