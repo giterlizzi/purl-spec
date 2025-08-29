@@ -25,6 +25,7 @@ The structure of a PURL for this package type is:
 
 ## Name definition
 
+- **Case Sensitive:** Yes
 - **Native Label:** name
 - **Note:** `The name is the repository name.`
 
